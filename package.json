@@ -1,6 +1,6 @@
 {
   "name": "astro-pages-i18n",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "An astro integration to sync i18n pages.",
   "homepage": "https://github.com/QuentinDutot/astro-pages-i18n#readme",

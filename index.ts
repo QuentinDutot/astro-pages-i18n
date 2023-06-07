@@ -2,7 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 // import { fileURLToPath } from 'node:url'
 import type { AstroIntegration } from 'astro'
-import chokidar from 'chokidar'
+// import chokidar from 'chokidar'
 
 // const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
@@ -91,24 +91,24 @@ const i18n = ({ langs, routes = {} }: I18nIntegration): AstroIntegration => ({
         })
       })
 
-      const watcher = chokidar.watch(targetDir, { ignoreInitial: true })
+      // const watcher = chokidar.watch(targetDir, { ignoreInitial: true })
 
-      watcher.on('change', async (filePath) => {
-        consoleLog('File changed', filePath)
-        consoleLog('🔍', 'Refresh the page in browser to see the changes. No HMR support yet.')
-      })
+      // watcher.on('change', async (filePath) => {
+      //   consoleLog('File changed', filePath)
+      //   consoleLog('🔍', 'Refresh the page in browser to see the changes. No HMR support yet.')
+      // })
 
-      watcher.on('add', async (filePath) => {
-        consoleLog('File added', filePath)
-        consoleLog('🚧', 'Restart needed to rescan files.')
-        process.exit(1)
-      })
+      // watcher.on('add', async (filePath) => {
+      //   consoleLog('File added', filePath)
+      //   consoleLog('🚧', 'Restart needed to rescan files.')
+      //   process.exit(1)
+      // })
 
-      watcher.on('unlink', async (filePath) => {
-        consoleLog('File deleted', filePath)
-        consoleLog('🚧', 'Restart needed to rescan files.')
-        process.exit(1)
-      })
+      // watcher.on('unlink', async (filePath) => {
+      //   consoleLog('File deleted', filePath)
+      //   consoleLog('🚧', 'Restart needed to rescan files.')
+      //   process.exit(1)
+      // })
     },
   },
 })
